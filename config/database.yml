@@ -1,0 +1,28 @@
+# Postgresql
+#   gem install postgresql
+#
+#   Ensure the postgresql gem is defined in your Gemfile
+#   gem 'postgresql'
+development:
+  adapter: postgresql
+  database: easyOpenSource_development
+  pool: 5
+  username: kiko
+  password: mimimi03
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  adapter: postgresql
+  database: easyOpenSource_test
+  pool: 5
+  username: kiko
+  password: mimimi03
+
+production:
+  adapter: postgresql
+  database: easyOpenSource_production
+  pool: 5
+  username: kiko
+  password: mimimi03

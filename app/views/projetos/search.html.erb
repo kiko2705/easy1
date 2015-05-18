@@ -1,0 +1,14 @@
+<div class="">
+	<% if @projetos.empty? %>
+		<h1>Projeto não encontrado.</h1>
+		<br>
+		<p><%= "Usuário procurou por: '#{@query}'" %></p>
+	<% else %>
+		<h1><%= "Encontrado(s) #{@projetos.size} Projeto(s)." %></h1>
+		<br>
+		<p><%= "Usuário procurou por: '#{@query}'" %></p>
+		<br>
+		<h2>Projetos</h2>
+		<%= render "projetos/lista_projetos" %>
+	<% end %>
+</div> 

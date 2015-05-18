@@ -1,0 +1,191 @@
+ Estes html são do menu superior antigo
+ (kikoasgs@usp.com.br   KIKO2705  mimimi03@)
+
+ <li><a href="/projetos" rel="tooltip" title="Vai para a página de projetos">Projetos</a></li>
+        <li><a href="/search_novatos" rel="tooltip" title="Contribuir para o projeto">Contribuir</a></li>
+        <li><a href="/qualificacaos" rel="tooltip" title="Qualifica as habilidades do usuário">Qualificacões</a></li>
+        <li><a href="/bugs" rel="tooltip" title="Lista os bugs de cada projeto">Bugs</a></li>
+        <li><a href="/pesquisar" rel="tooltip" title="Pesquisa, por diversos critérios de seleção os bugs existentes em cada projeto">Pesquisar</a></li>
+        <li><a href="#" rel="tooltip" title="Sugerir melhorias no sistema">Sugerir</a></li>
+
+        <div class="text-right">
+        <strong><%= Time.zone.now %></strong>
+        </div>
+
+    <% if user_signed_in? %>
+    <strong>Username: </strong> <%= current_user.nome %>
+    <strong>~~</strong>    
+    <strong>Email   :</strong><%= current_user.email %>
+    <% else %>
+    <% end %>
+
+--------------------------------------------------------------------------------------------------
+colocar no index do view projetos = index.html.erb
+
+<h1>Projetos</h1>
+
+<table class="" >
+  <thead>
+    <tr>
+      <th>Nome</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projetos.each do |projeto| %>
+      <tr>
+        <td><%= projeto.nome %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'Cadastrar Projeto',  new_projeto_path, class: 'btn btn-primary' %>
+
+--------------------------------------------------------------------------------------------------
+colocar no projeto.rb  para busca avançada e mudar o nome search para outro qualquer
+
+def self.search(linguagem, os, ide, repositorio, database)
+    return scoped unless linguagem.present? || os.present? ||  ide.present? || repositorio.present? || 
+                         database.present?
+        where(['linguagem LIKE ? OR os LIKE ? OR ide LIKE ? 
+                 OR repositorio LIKE ? OR database LIKE ?', 
+                "%#{linguagem}%", "%#{os}%", "%#{ide}%", "%#{repositorio}%", "%#{database}%"])
+end
+
+-----------------------------------------------------------------------------------------------
+colocar no projetos_controller para busca avançada
+
+# GET /search
+  def search
+    #nome = params[:nome]
+    linguagem = params[:linguagem]
+    os = params[:os]
+    ide = params[:ide]
+    repositorio = params[:repositorio]
+    database = params[:database]
+    @projetos = Projeto.search(linguagem, os, ide, repositorio, database)
+  end
+
+  ----------------------------------------------------------------------------------------------
+colocar este html no search de projetos para busca avançada
+
+  <h4>Buscar Projetos</h4><br>
+<strong>Selecione os critérios para trazer os projetos</strong>
+<%= form_tag search_projetos_path, :method => 'get' do %>
+    <p>
+        <%= select_tag :linguagem, "<option>Assembler</option><option>C</option><option>C++</option><option>C#</option><option>Objective C</option><option>Java</option><option>Ruby</option><option>Phyton</option><option>Perl</option><option>HTML</option><option>Asp</option><option>Javascript</option><option>Smalltalk</option><option>XML</option><option>Lua</option><option>Indiferente</option>".html_safe %>
+        <%= select_tag :os, "<option>Windows</option><option>Linux</option><option>IOS</option><option>Android</option><option>Unix</option><option>Indiferente</option>".html_safe %>
+        <br><%= select_tag :ide, "<option>Visual Studio</option><option>Eclipse</option><option>Netbeans</option><option>Xcode</option><option>rubyMine</option><option>Dev C++</option><option>Android Studio</option><option>Indiferente</option>".html_safe %>
+        <%= select_tag :repositorio, "<option>GitHub</option><option>SourceForge</option><option>GoogleCode</option><option>BitBucket</option><option>LauncjPad</option><option>CodePlex</option><option>Indiferente</option>".html_safe %>
+        <br><%= select_tag :database, "<option>Oracle</option><option>MySQL</option><option>PostgreSQL</option><option>DB2</option><option>MongoDB</option><option>SQLite</option><option>Access</option><option>Sybase</option><option>Teradata</option><option>Indiferente</option>".html_safe %>
+        <br><%= submit_tag "Buscar", :linguagem => nil, :os => nil, :ide => nil, :repositorio => nil, :database => nil %>
+    </p>
+<% end %>
+
+<h4>Projetos Correspondentes à Busca</h4>
+
+<table class="table table-condensed" >
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Administrador</th>
+      <th>Descricao</th>
+      <th>Linguagem</th>
+      <th>OS</th>
+      <th>IDE</th>
+      <th>Repositorio</th>
+      <th>Banco Dados</th>
+      <th>Data inicio</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projetos.each do |projeto| %>
+      <tr>
+        <td><%= projeto.nome %></td>
+        <td><%= projeto.administrador %></td>
+        <td><%= projeto.descricao %></td>
+        <td><%= projeto.linguagem %></td>
+        <td><%= projeto.os %></td>
+        <td><%= projeto.ide %></td>
+        <td><%= projeto.repositorio %></td>
+        <td><%= projeto.database %></td>
+        <td><%= projeto.data_inicio %></td>
+        <td><%= projeto.status %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+-------------------------------------------------------------------------------------------------
+colocar na pagina show de projetos
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @projeto.nome %>
+</p>
+
+<p>
+  <strong>Administrador:</strong>
+  <%= @projeto.administrador %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @projeto.descricao %>
+</p>
+
+<p>
+  <strong>Linguagem:</strong>
+  <%= @projeto.linguagem %>
+</p>
+
+<p>
+  <strong>Fonte zip:</strong>
+  <%= @projeto.arquivoproj %>
+</p>
+
+<p>
+  <strong>Data inicio:</strong>
+  <%= @projeto.data_inicio %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @projeto.status %>
+</p>
+
+----------------------------------------------------------------------------------------
+colocar no projeto quando for fazer filtro específico
+
+<div class="field">
+    <%= f.select :linguagem, ['Assembler', 'C', 'C++', 'C#', 'Objective C', 'Java', 'Ruby', 'Phyton', 'Perl', 'HTML', 'ASP', 'Javascript', 'Smalltalk', 'XML', 'Lua'], :include_blank => "Linguagem" %>
+  </div> 
+  <div class="field">
+    <%= f.select :os, ['Windows', 'Linux','IOS', 'Android' , 'Unix'], :include_blank => "OS" %>
+  </div>
+  <div class="field">
+    <%= f.select :ide, ['Visual Studio', 'Eclipse','Netbeans', 'Xcode' , 'rubyMine' , 'Dev C++', 'Android Studio'], :include_blank => "IDE" %>
+  </div>
+  <div class="field">
+    <%= f.select :repositorio, ['GitHub', 'SourceForge','GoogleCode', 'BitBucket' , 'LauncjPad' , 'CodePlex'], :include_blank => "Repositorio" %>
+  </div>
+  <div class="field">
+    <%= f.select :database, ['Oracle', 'MySQL','PostgreSQL', 'DB2' , 'MongoDB' , 'SQLite', 'Access', 'Sybase', 'Teradata'], :include_blank => "Banco" %>
+  </div>
+   <div class="field">
+    <%= f.file_field :arquivoproj %>
+  </div>
+  <div class="field">
+    <%= f.select :status, ['Ativo', 'Aprovação', 'Inativo'], :include_blank => "Status" %>
+  </div>

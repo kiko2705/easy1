@@ -1,0 +1,45 @@
+<html>
+<head>
+
+  <title>EasyOpenSource</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+  <%= csrf_meta_tags %>
+
+    <ul class="nav nav-tabs">
+        <li><a href="/static_pages/home" rel="tooltip" title="Página inicial">Home</a></li>
+        <li><a href="/projetos" rel="tooltip" title="Vai para a página de projetos">Projetos</a></li>
+        <li><a href="/qualificacaos/new" rel="tooltip" title="Contribuir para o projeto">Contribuir</a></li>
+        <li><a href="/qualificacaos" rel="tooltip" title="Qualifica as habilidades do usuário">Qualificacões</a></li>
+        <li><a href="/bugs" rel="tooltip" title="Lista os bugs de cada projeto">Bugs</a></li>
+        <li><a href="#" rel="tooltip" title="Pesquisa, por diversos critérios de seleção os bugs existentes em cada projeto">Pesquisar</a></li>
+        <li><a href="#" rel="tooltip" title="Sugerir melhorias no sistema">Sugerir</a></li>
+        
+    </ul>
+
+    <div class="text-right">
+    <strong><%= Time.zone.now %></strong>
+    </div>
+
+    <% if user_signed_in? %>
+    <strong>Username: </strong> <%= current_user.nome %>
+    <strong>~~</strong>    
+    <strong>Email   :</strong><%= current_user.email %>
+    <% else %>
+    <% end %>
+
+</head>
+
+<body>
+<script src="js/bootstrap.js"></script>
+<script src="http://code.jquery.com/jquery.js"></script>
+
+<p class='notice'><%= notice  %></p>
+<p class='alert'><%= alert  %></p>
+
+<%= yield %>
+</body>
+</html>

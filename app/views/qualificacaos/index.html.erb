@@ -1,0 +1,38 @@
+<h1>Qualificacões</h1>
+
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Nome de Usuário</th>
+      <th>Linguagem</th>
+      <th>OS</th>
+      <th>IDE</th>
+      <th>Repositorio</th>
+      <th>Banco Dados</th>
+      <th>Nivel Conhecimento</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @qualificacaos.each do |qualificacao| %>
+      <tr>
+        <td><%= (qualificacao.user) ? qualificacao.user.nome : "null"%></td>
+        <td><%= qualificacao.linguagem %></td>
+        <td><%= qualificacao.os %></td>
+        <td><%= qualificacao.ide %></td>
+        <td><%= qualificacao.repositorio %></td>
+        <td><%= qualificacao.database %></td>
+        <td><%= qualificacao.nivelConhecimento %></td>
+        <td><%= link_to 'Editar', edit_qualificacao_path(qualificacao), class: 'btn btn-warning'%></td>
+        <td><%= link_to 'Deletar', qualificacao, :method => :delete, data: { confirm: 'Tem certeza?' } , class: 'btn btn-danger' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

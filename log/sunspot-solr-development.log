@@ -1,0 +1,316 @@
+Mai 15, 2015 8:20:08 PM org.apache.solr.servlet.SolrDispatchFilter init
+INFORMAÇÕES: SolrDispatchFilter.init()
+Mai 15, 2015 8:20:09 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFORMAÇÕES: JNDI not configured for solr (NoInitialContextEx)
+Mai 15, 2015 8:20:09 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFORMAÇÕES: using system property solr.solr.home: /home/kiko/ruby4/_4.0.0_/easy/solr
+Mai 15, 2015 8:20:09 PM org.apache.solr.core.CoreContainer$Initializer initialize
+INFORMAÇÕES: looking for solr.xml: /home/kiko/ruby4/_4.0.0_/easy/solr/solr.xml
+Mai 15, 2015 8:20:09 PM org.apache.solr.core.CoreContainer <init>
+INFORMAÇÕES: New CoreContainer 1428090709
+Mai 15, 2015 8:20:09 PM org.apache.solr.core.CoreContainer load
+INFORMAÇÕES: Loading CoreContainer using Solr Home: '/home/kiko/ruby4/_4.0.0_/easy/solr/'
+Mai 15, 2015 8:20:09 PM org.apache.solr.core.SolrResourceLoader <init>
+INFORMAÇÕES: new SolrResourceLoader for directory: '/home/kiko/ruby4/_4.0.0_/easy/solr/'
+Mai 15, 2015 8:20:09 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFORMAÇÕES: Setting socketTimeout to: 0
+Mai 15, 2015 8:20:09 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFORMAÇÕES: Setting urlScheme to: http://
+Mai 15, 2015 8:20:09 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFORMAÇÕES: Setting connTimeout to: 0
+Mai 15, 2015 8:20:09 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFORMAÇÕES: Setting maxConnectionsPerHost to: 20
+Mai 15, 2015 8:20:09 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFORMAÇÕES: Setting corePoolSize to: 0
+Mai 15, 2015 8:20:09 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFORMAÇÕES: Setting maximumPoolSize to: 2147483647
+Mai 15, 2015 8:20:09 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFORMAÇÕES: Setting maxThreadIdleTime to: 5
+Mai 15, 2015 8:20:09 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFORMAÇÕES: Setting sizeOfQueue to: -1
+Mai 15, 2015 8:20:09 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFORMAÇÕES: Setting fairnessPolicy to: false
+Mai 15, 2015 8:20:09 PM org.apache.solr.client.solrj.impl.HttpClientUtil createClient
+INFORMAÇÕES: Creating new http client, config:maxConnectionsPerHost=20&maxConnections=10000&socketTimeout=0&connTimeout=0&retry=false
+Mai 15, 2015 8:20:10 PM org.apache.solr.core.CoreContainer load
+INFORMAÇÕES: Registering Log Listener
+Mai 15, 2015 8:20:10 PM org.apache.solr.core.CoreContainer create
+INFORMAÇÕES: Creating SolrCore 'default' using instanceDir: /home/kiko/ruby4/_4.0.0_/easy/solr/.
+Mai 15, 2015 8:20:10 PM org.apache.solr.core.CoreContainer create
+INFORMAÇÕES: Creating SolrCore 'development' using instanceDir: /home/kiko/ruby4/_4.0.0_/easy/solr/.
+Mai 15, 2015 8:20:10 PM org.apache.solr.core.CoreContainer create
+INFORMAÇÕES: Creating SolrCore 'test' using instanceDir: /home/kiko/ruby4/_4.0.0_/easy/solr/.
+Mai 15, 2015 8:20:10 PM org.apache.solr.core.SolrResourceLoader <init>
+INFORMAÇÕES: new SolrResourceLoader for directory: '/home/kiko/ruby4/_4.0.0_/easy/solr/./'
+Mai 15, 2015 8:20:10 PM org.apache.solr.core.SolrResourceLoader <init>
+INFORMAÇÕES: new SolrResourceLoader for directory: '/home/kiko/ruby4/_4.0.0_/easy/solr/./'
+Mai 15, 2015 8:20:10 PM org.apache.solr.core.SolrResourceLoader <init>
+INFORMAÇÕES: new SolrResourceLoader for directory: '/home/kiko/ruby4/_4.0.0_/easy/solr/./'
+Mai 15, 2015 8:20:11 PM org.apache.solr.core.SolrConfig <init>
+INFORMAÇÕES: Using Lucene MatchVersion: LUCENE_41
+Mai 15, 2015 8:20:11 PM org.apache.solr.core.SolrConfig <init>
+INFORMAÇÕES: Using Lucene MatchVersion: LUCENE_41
+Mai 15, 2015 8:20:11 PM org.apache.solr.core.SolrConfig <init>
+INFORMAÇÕES: Using Lucene MatchVersion: LUCENE_41
+Mai 15, 2015 8:20:11 PM org.apache.solr.core.SolrConfig <init>
+INFORMAÇÕES: Loaded SolrConfig: solrconfig.xml
+Mai 15, 2015 8:20:11 PM org.apache.solr.core.SolrConfig <init>
+INFORMAÇÕES: Loaded SolrConfig: solrconfig.xml
+Mai 15, 2015 8:20:11 PM org.apache.solr.schema.IndexSchema readSchema
+INFORMAÇÕES: Reading Solr Schema
+Mai 15, 2015 8:20:11 PM org.apache.solr.schema.IndexSchema readSchema
+INFORMAÇÕES: Reading Solr Schema
+Mai 15, 2015 8:20:11 PM org.apache.solr.core.SolrConfig <init>
+INFORMAÇÕES: Loaded SolrConfig: solrconfig.xml
+Mai 15, 2015 8:20:11 PM org.apache.solr.schema.IndexSchema readSchema
+INFORMAÇÕES: Reading Solr Schema
+Mai 15, 2015 8:20:11 PM org.apache.solr.schema.IndexSchema readSchema
+INFORMAÇÕES: Schema name=sunspot
+Mai 15, 2015 8:20:11 PM org.apache.solr.schema.IndexSchema readSchema
+INFORMAÇÕES: Schema name=sunspot
+Mai 15, 2015 8:20:11 PM org.apache.solr.schema.IndexSchema readSchema
+INFORMAÇÕES: Schema name=sunspot
+Mai 15, 2015 8:20:12 PM org.apache.solr.schema.IndexSchema readSchema
+INFORMAÇÕES: default search field in schema is text
+Mai 15, 2015 8:20:12 PM org.apache.solr.schema.IndexSchema readSchema
+INFORMAÇÕES: default search field in schema is text
+Mai 15, 2015 8:20:12 PM org.apache.solr.schema.IndexSchema readSchema
+INFORMAÇÕES: query parser default operator is AND
+Mai 15, 2015 8:20:12 PM org.apache.solr.schema.IndexSchema readSchema
+INFORMAÇÕES: query parser default operator is AND
+Mai 15, 2015 8:20:12 PM org.apache.solr.schema.IndexSchema readSchema
+INFORMAÇÕES: unique key field: id
+Mai 15, 2015 8:20:12 PM org.apache.solr.schema.IndexSchema readSchema
+INFORMAÇÕES: unique key field: id
+Mai 15, 2015 8:20:12 PM org.apache.solr.schema.IndexSchema readSchema
+INFORMAÇÕES: default search field in schema is text
+Mai 15, 2015 8:20:12 PM org.apache.solr.schema.IndexSchema readSchema
+INFORMAÇÕES: query parser default operator is AND
+Mai 15, 2015 8:20:12 PM org.apache.solr.schema.IndexSchema readSchema
+INFORMAÇÕES: unique key field: id
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.SolrCore <init>
+INFORMAÇÕES: [development] Opening new SolrCore at /home/kiko/ruby4/_4.0.0_/easy/solr/./, dataDir=/home/kiko/ruby4/_4.0.0_/easy/solr/./development/data/
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.SolrCore <init>
+INFORMAÇÕES: JMX monitoring not detected for core: development
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.SolrCore <init>
+INFORMAÇÕES: [test] Opening new SolrCore at /home/kiko/ruby4/_4.0.0_/easy/solr/./, dataDir=/home/kiko/ruby4/_4.0.0_/easy/solr/./test/data/
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.SolrCore <init>
+INFORMAÇÕES: [default] Opening new SolrCore at /home/kiko/ruby4/_4.0.0_/easy/solr/./, dataDir=/home/kiko/ruby4/_4.0.0_/easy/solr/./default/data/
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.SolrCore <init>
+INFORMAÇÕES: JMX monitoring not detected for core: default
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.SolrCore <init>
+INFORMAÇÕES: JMX monitoring not detected for core: test
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.SolrCore initDirectoryFactory
+INFORMAÇÕES: solr.NRTCachingDirectoryFactory
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.SolrCore initDirectoryFactory
+INFORMAÇÕES: solr.NRTCachingDirectoryFactory
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.SolrCore initDirectoryFactory
+INFORMAÇÕES: solr.NRTCachingDirectoryFactory
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.CachingDirectoryFactory get
+INFORMAÇÕES: return new directory for /home/kiko/ruby4/_4.0.0_/easy/solr/./development/data forceNew: false
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.CachingDirectoryFactory get
+INFORMAÇÕES: return new directory for /home/kiko/ruby4/_4.0.0_/easy/solr/./test/data forceNew: false
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.SolrCore getNewIndexDir
+INFORMAÇÕES: New index directory detected: old=null new=/home/kiko/ruby4/_4.0.0_/easy/solr/./test/data/index/
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.SolrCore getNewIndexDir
+INFORMAÇÕES: New index directory detected: old=null new=/home/kiko/ruby4/_4.0.0_/easy/solr/./development/data/index/
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.CachingDirectoryFactory get
+INFORMAÇÕES: return new directory for /home/kiko/ruby4/_4.0.0_/easy/solr/./default/data forceNew: false
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.CachingDirectoryFactory get
+INFORMAÇÕES: return new directory for /home/kiko/ruby4/_4.0.0_/easy/solr/./test/data/index forceNew: false
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.SolrCore getNewIndexDir
+INFORMAÇÕES: New index directory detected: old=null new=/home/kiko/ruby4/_4.0.0_/easy/solr/./default/data/index/
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.CachingDirectoryFactory get
+INFORMAÇÕES: return new directory for /home/kiko/ruby4/_4.0.0_/easy/solr/./development/data/index forceNew: false
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.CachingDirectoryFactory get
+INFORMAÇÕES: return new directory for /home/kiko/ruby4/_4.0.0_/easy/solr/./default/data/index forceNew: false
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /select: solr.SearchHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /query: solr.SearchHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /select: solr.SearchHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /get: solr.RealTimeGetHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /select: solr.SearchHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /query: solr.SearchHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /query: solr.SearchHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /get: solr.RealTimeGetHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /update: solr.UpdateRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /update: solr.UpdateRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /get: solr.RealTimeGetHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /update: solr.UpdateRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /update/json: solr.JsonUpdateRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /update/json: solr.JsonUpdateRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /update/json: solr.JsonUpdateRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /update/csv: solr.CSVRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /update/csv: solr.CSVRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /update/csv: solr.CSVRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /update/extract: solr.extraction.ExtractingRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /analysis/field: solr.FieldAnalysisRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /update/extract: solr.extraction.ExtractingRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /update/extract: solr.extraction.ExtractingRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /analysis/document: solr.DocumentAnalysisRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /analysis/field: solr.FieldAnalysisRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /analysis/document: solr.DocumentAnalysisRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /analysis/field: solr.FieldAnalysisRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /admin/ping: solr.PingRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /admin/ping: solr.PingRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /analysis/document: solr.DocumentAnalysisRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /debug/dump: solr.DumpRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /debug/dump: solr.DumpRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /admin/ping: solr.PingRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /debug/dump: solr.DumpRequestHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /replication: solr.ReplicationHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /replication: solr.ReplicationHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /replication: solr.ReplicationHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /mlt: solr.MoreLikeThisHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /mlt: solr.MoreLikeThisHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /mlt: solr.MoreLikeThisHandler
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /admin/: solr.admin.AdminHandlers
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /admin/: solr.admin.AdminHandlers
+Mai 15, 2015 8:20:12 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFORMAÇÕES: created /admin/: solr.admin.AdminHandlers
+Mai 15, 2015 8:20:12 PM org.apache.solr.handler.loader.XMLLoader init
+INFORMAÇÕES: xsltCacheLifetimeSeconds=60
+Mai 15, 2015 8:20:12 PM org.apache.solr.handler.loader.XMLLoader init
+INFORMAÇÕES: xsltCacheLifetimeSeconds=60
+Mai 15, 2015 8:20:12 PM org.apache.solr.handler.loader.XMLLoader init
+INFORMAÇÕES: xsltCacheLifetimeSeconds=60
+Mai 15, 2015 8:20:12 PM org.apache.solr.handler.loader.XMLLoader init
+INFORMAÇÕES: xsltCacheLifetimeSeconds=60
+Mai 15, 2015 8:20:12 PM org.apache.solr.handler.loader.XMLLoader init
+INFORMAÇÕES: xsltCacheLifetimeSeconds=60
+Mai 15, 2015 8:20:12 PM org.apache.solr.handler.loader.XMLLoader init
+INFORMAÇÕES: xsltCacheLifetimeSeconds=60
+Mai 15, 2015 8:20:12 PM org.apache.solr.handler.loader.XMLLoader init
+INFORMAÇÕES: xsltCacheLifetimeSeconds=60
+Mai 15, 2015 8:20:12 PM org.apache.solr.handler.loader.XMLLoader init
+INFORMAÇÕES: xsltCacheLifetimeSeconds=60
+Mai 15, 2015 8:20:12 PM org.apache.solr.handler.loader.XMLLoader init
+INFORMAÇÕES: xsltCacheLifetimeSeconds=60
+Mai 15, 2015 8:20:12 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFORMAÇÕES: Opening Searcher@2270f5ea main
+Mai 15, 2015 8:20:12 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFORMAÇÕES: Opening Searcher@25da9954 main
+Mai 15, 2015 8:20:12 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFORMAÇÕES: Opening Searcher@59d6ab48 main
+Mai 15, 2015 8:20:13 PM org.apache.solr.update.CommitTracker <init>
+INFORMAÇÕES: Hard AutoCommit: if uncommited for 15000ms; 
+Mai 15, 2015 8:20:13 PM org.apache.solr.update.CommitTracker <init>
+INFORMAÇÕES: Hard AutoCommit: if uncommited for 15000ms; 
+Mai 15, 2015 8:20:13 PM org.apache.solr.update.CommitTracker <init>
+INFORMAÇÕES: Hard AutoCommit: if uncommited for 15000ms; 
+Mai 15, 2015 8:20:13 PM org.apache.solr.update.CommitTracker <init>
+INFORMAÇÕES: Soft AutoCommit: if uncommited for 5000ms; 
+Mai 15, 2015 8:20:13 PM org.apache.solr.update.CommitTracker <init>
+INFORMAÇÕES: Soft AutoCommit: if uncommited for 5000ms; 
+Mai 15, 2015 8:20:13 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFORMAÇÕES: Initializing spell checkers
+Mai 15, 2015 8:20:13 PM org.apache.solr.update.CommitTracker <init>
+INFORMAÇÕES: Soft AutoCommit: if uncommited for 5000ms; 
+Mai 15, 2015 8:20:13 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFORMAÇÕES: Initializing spell checkers
+Mai 15, 2015 8:20:13 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFORMAÇÕES: Initializing spell checkers
+Mai 15, 2015 8:20:13 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFORMAÇÕES: Registering newSearcher listener for spellchecker: default
+Mai 15, 2015 8:20:13 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFORMAÇÕES: Registering newSearcher listener for spellchecker: default
+Mai 15, 2015 8:20:13 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFORMAÇÕES: Registering newSearcher listener for spellchecker: default
+Mai 15, 2015 8:20:13 PM org.apache.solr.spelling.DirectSolrSpellChecker init
+INFORMAÇÕES: init: {name=example,field=title_text,buildOnCommit=true,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+Mai 15, 2015 8:20:13 PM org.apache.solr.spelling.DirectSolrSpellChecker init
+INFORMAÇÕES: init: {name=example,field=title_text,buildOnCommit=true,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+Mai 15, 2015 8:20:13 PM org.apache.solr.spelling.DirectSolrSpellChecker init
+INFORMAÇÕES: init: {name=example,field=title_text,buildOnCommit=true,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+Mai 15, 2015 8:20:13 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFORMAÇÕES: Registering newSearcher listener for spellchecker: example
+Mai 15, 2015 8:20:13 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFORMAÇÕES: Registering newSearcher listener for spellchecker: example
+Mai 15, 2015 8:20:13 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFORMAÇÕES: Registering newSearcher listener for spellchecker: example
+Mai 15, 2015 8:20:13 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFORMAÇÕES: No queryConverter defined, using default converter
+Mai 15, 2015 8:20:13 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFORMAÇÕES: No queryConverter defined, using default converter
+Mai 15, 2015 8:20:13 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFORMAÇÕES: No queryConverter defined, using default converter
+Mai 15, 2015 8:20:13 PM org.apache.solr.handler.ReplicationHandler inform
+INFORMAÇÕES: Commits will be reserved for  10000
+Mai 15, 2015 8:20:13 PM org.apache.solr.handler.ReplicationHandler inform
+INFORMAÇÕES: Commits will be reserved for  10000
+Mai 15, 2015 8:20:13 PM org.apache.solr.handler.ReplicationHandler inform
+INFORMAÇÕES: Commits will be reserved for  10000
+Mai 15, 2015 8:20:13 PM org.apache.solr.core.SolrCore registerSearcher
+INFORMAÇÕES: [default] Registered new searcher Searcher@2270f5ea main{StandardDirectoryReader(segments_1:1)}
+Mai 15, 2015 8:20:13 PM org.apache.solr.core.CoreContainer registerCore
+INFORMAÇÕES: registering core: test
+Mai 15, 2015 8:20:13 PM org.apache.solr.core.CoreContainer registerCore
+INFORMAÇÕES: registering core: default
+Mai 15, 2015 8:20:13 PM org.apache.solr.core.CoreContainer registerCore
+INFORMAÇÕES: registering core: development
+Mai 15, 2015 8:20:13 PM org.apache.solr.core.SolrCore registerSearcher
+INFORMAÇÕES: [development] Registered new searcher Searcher@25da9954 main{StandardDirectoryReader(segments_1:1)}
+Mai 15, 2015 8:20:13 PM org.apache.solr.core.SolrCore registerSearcher
+INFORMAÇÕES: [test] Registered new searcher Searcher@59d6ab48 main{StandardDirectoryReader(segments_1:1)}
+Mai 15, 2015 8:20:13 PM org.apache.solr.servlet.SolrDispatchFilter init
+INFORMAÇÕES: user.dir=/var/lib/gems/1.9.1/gems/sunspot_solr-2.2.0/solr
+Mai 15, 2015 8:20:13 PM org.apache.solr.servlet.SolrDispatchFilter init
+INFORMAÇÕES: SolrDispatchFilter.init() done

@@ -1,0 +1,59 @@
+<h1>Questionário Novatos</h1>
+
+<p>
+  <strong>Se é sua primeira vez, iremos lhe guiar para que seja mais fácil contribuir.</strong> 
+  <br><strong>Preencha o formulário abaixo para ser direcionado aos projetos que mais lhe atendem</strong> 
+</p>
+<%= form_tag search_novatos_qualificacaos_path, :method => 'get' do %>
+    <p>
+        <%= select_tag :linguagem, "<option>Assembler</option><option>C</option><option>C++</option><option>C#</option><option>Objective C</option><option>Java</option><option>Ruby</option><option>Phyton</option><option>Perl</option><option>HTML</option><option>Asp</option><option>Javascript</option><option>Smalltalk</option><option>XML</option><option>Lua</option><option>Indiferente</option>".html_safe %>
+        <%= select_tag :os, "<option>Windows</option><option>Linux</option><option>IOS</option><option>Android</option><option>Unix</option><option>Indiferente</option>".html_safe %>
+        <br><%= select_tag :ide, "<option>Visual Studio</option><option>Eclipse</option><option>Netbeans</option><option>Xcode</option><option>rubyMine</option><option>Dev C++</option><option>Android Studio</option><option>Indiferente</option>".html_safe %>
+        <%= select_tag :repositorio, "<option>GitHub</option><option>SourceForge</option><option>GoogleCode</option><option>BitBucket</option><option>LauncjPad</option><option>CodePlex</option><option>Indiferente</option>".html_safe %>
+        <br><%= select_tag :database, "<option>Oracle</option><option>MySQL</option><option>PostgreSQL</option><option>DB2</option><option>MongoDB</option><option>SQLite</option><option>Access</option><option>Sybase</option><option>Teradata</option><option>Indiferente</option>".html_safe %>
+        <br><%= submit_tag "Buscar Projetos", :linguagem => nil, :os => nil, :ide => nil, :repositorio => nil, :database => nil %>
+    </p>
+<% end %>
+
+<h1>Projetos Escolhidos</h1>
+
+<table class="table table-condensed" >
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Administrador</th>
+      <th>Descricao</th>
+      <th>Linguagem</th>
+      <th>OS</th>
+      <th>IDE</th>
+      <th>Repositorio</th>
+      <th>Banco Dados</th>
+      <th>Arquivo Fonte</th>
+      <th>Data inicio</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projetos.each do |projeto| %>
+      <tr>
+        <td><%= projeto.nome %></td>
+        <td><%= projeto.administrador %></td>
+        <td><%= projeto.descricao %></td>
+        <td><%= projeto.linguagem %></td>
+        <td><%= projeto.os %></td>
+        <td><%= projeto.ide %></td>
+        <td><%= projeto.repositorio %></td>
+        <td><%= projeto.database %></td>
+        <td><%= projeto.arquivo %></td>
+        <td><%= projeto.data_inicio %></td>
+        <td><%= projeto.status %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

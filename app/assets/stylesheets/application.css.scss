@@ -1,0 +1,55 @@
+@import "bootstrap";
+@import "forem-bootstrap";
+
+.navbar-brand img {
+	margin-top: -5px;
+}
+
+p#notice {
+	color: black;
+	background-color: rgba(128, 128, 128, 0.2);
+	border: solid 2px gray;
+	text-align: center;
+	padding: 5px;
+}
+
+body {
+	/*background: url('/assets/bg.jpg');   cor padrão = #34495e 336666 031F2C */
+	background-color: #336666;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.display {
+	background-color: rgba(255, 255, 255, 0.6);
+	padding: 30px;
+}
+
+.container {
+	margin-top: 60px;
+	width: 80%;
+	padding: 40px;
+	padding-top: 20px;
+}
+
+.navigation {
+	float: right;
+	margin-top: 30px;
+	margin-right: 30px;
+}
+
+#notice {
+	color: green;
+}
+
+ /* Menu horizontal de login e cadastro */
+ ul.hmenu {
+  list-style: none; 
+  margin: 0 0 2em;
+  padding: 0;
+}
+
+ul.hmenu li {
+  display: inline;  
+}

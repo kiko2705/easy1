@@ -1,0 +1,30 @@
+<%= form_for(@contribuicao) do |f| %>
+  <% if @contribuicao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contribuicao.errors.count, "erro") %> Impossível persistir dado:</h2>
+
+      <ul>
+      <% @contribuicao.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :usuário %><br>
+    <strong><%= current_user.username %></strong>
+  </div>
+  <div class="field">
+    <%= f.text_field :versao, :placeholder => "Número da versão" %>
+  </div>
+<div class="field">
+  <%= f.file_field :arquivo %>
+</div>
+  <div class="field">
+   <%= f.label :data %><br>
+   <strong><%= Date.today %></strong>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Incluir Contribuicao', class: 'btn btn-primary' %>
+  </div>
+<% end %>

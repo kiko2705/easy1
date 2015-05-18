@@ -1,0 +1,27 @@
+<%= form_for(@box_project) do |f| %>
+  <% if @box_project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@box_project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @box_project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-inputs">
+    <%= f.label  :projeto_id %>
+    <%= f.select :projeto_id, options_from_collection_for_select(Projeto.all, "id", "nome") %>
+    <%= f.label  :titulo %>
+    <%= f.text_field  :titulo %>
+    <%= f.label  :descricao %>
+    <%= f.text_field  :descricao %>
+    <%= f.label  :topico %>
+    <%= f.text_field  :topico %>
+    <%= f.label  :link %>
+    <%= f.text_field  :link %>
+  </div>
+    <%= f.submit 'Salvar', class: 'btn btn-primary' %>
+<% end %>

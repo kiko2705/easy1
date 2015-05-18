@@ -1,0 +1,35 @@
+<h1>Bugs</h1>
+
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Número</th>
+      <th>Descrição</th>
+      <th>Dificuldade</th>
+      <th>Colaborador</th>
+      <th>Projeto</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bugs.each do |bug| %>
+      <tr>
+        <td><%= bug.numero %></td>
+        <td><%= bug.descricao %></td>
+        <td><%= bug.dificuldade%></td>
+        <td><%= bug.colaborador %></td>
+        <td><%= (bug.projeto) ? bug.projeto.nome : "null"%></td>
+        <td><%= link_to 'Descrição Completa', bug , class: 'btn btn-primary'%></td>
+        <td><%= link_to 'Editar', edit_bug_path(bug), class: 'btn btn-warning'%></td>
+        <td><%= link_to 'Deletar', bug, :method => :delete, data: { confirm: 'Tem certeza?' } , class: 'btn btn-danger' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Bug', new_bug_path, class: 'btn btn-primary' %>

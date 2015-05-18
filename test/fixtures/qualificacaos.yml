@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  linguagem: MyString
+  nivelConhecimento: MyString
+
+two:
+  linguagem: MyString
+  nivelConhecimento: MyString

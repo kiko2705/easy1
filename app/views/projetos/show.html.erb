@@ -1,0 +1,18 @@
+ </div>
+ <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nome</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% if not @projetos.empty? %>
+    <% @projetos.each do |projeto| %>
+      <tr>
+        <td><%= link_to projeto.nome, box_projects_path %></td>
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>

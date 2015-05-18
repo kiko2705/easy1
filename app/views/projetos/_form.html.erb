@@ -1,0 +1,40 @@
+<%= form_for(@projeto, :url => projetos_path, :html => { :multipart => true  }) do |f| %>
+<% if @projeto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@projeto.errors.count, "erro") %> Impossível persistir dado:</h2>
+
+      <ul>
+      <% @projeto.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.text_field :nome, class: 'form-control', :placeholder => "Nome do Projeto"%>
+  </div>
+  <div class="field">
+    <%= f.text_area :descricao , class: 'form-control', :placeholder => "Descrição do Projeto"%>
+  </div>
+  <div class="field">
+    <%= f.text_area :licenca , class: 'form-control', :placeholder => "Licenças"%>
+  </div>
+  <div class="field">
+    <%= f.url_field :urlPagina , class: 'form-control', :placeholder => "URL página do projeto"%>
+  </div>
+  <div class="field">
+    <%= f.url_field :urlIssueTracker , class: 'form-control', :placeholder => "URL do issue tracker"%>
+  </div>
+  <div class="field">
+    <%= f.url_field :urlRepositorioFonte , class: 'form-control', :placeholder => "URL do repositorio do fonte"%>
+  </div>
+  <div class="field">
+    <%= f.url_field :urlMailingList , class: 'form-control', :placeholder => "URL da mailing list"%>
+  </div>
+  <div class="field">
+    <%= f.url_field :urlProjetoOpenHub , class: 'form-control', :placeholder => "URL do projeto open hub"%>
+  </div>
+    <%= f.submit 'Incluir Projeto', class: 'btn btn-primary' %>
+    <%= f.submit 'Limpar', :type => 'reset', class: 'btn btn-success' %>
+<% end %>
+     

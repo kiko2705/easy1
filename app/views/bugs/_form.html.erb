@@ -1,0 +1,34 @@
+<%= form_for(@bug) do |f| %>
+  <% if @bug.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bug.errors.count, "error") %> Impossível persistir dado:</h2>
+
+      <ul>
+      <% @bug.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.number_field :numero, :placeholder => "Número do bug" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :colaborador, :placeholder => "Nome do colaborador" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :descricao, :placeholder => "Descrição do bug" %>
+  </div>
+  <div class="field">
+    <%= f.label :dificuldade %><br>
+    <%= f.select :dificuldade, ['Alta', 'Média', 'Baixa' ] %><br>
+  </div>
+  <div class="field">
+    <%= f.label :projeto_id %><br>
+    <%= f.select :projeto_id, options_from_collection_for_select(Projeto.all, "id", "nome")%>
+  </div> 
+  <div class="actions">
+    <%= f.submit 'Incluir bug', class: 'btn btn-primary' %>
+  </div>
+<% end %>

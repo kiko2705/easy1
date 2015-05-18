@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Floss Coach</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "forem" %>
+  <%= javascript_include_tag "forem" %>
+  
+  <%= csrf_meta_tags %>
+
+    <ul class="nav nav-tabs">
+        <li><a href="/static_pages/home" rel="tooltip" title="Página inicial"><h4>FLOSS COACH</h4></a></li>
+        <li><a href="/static_pages/home" rel="tooltip" title="Página inicial"><h4>HOME</h4></a></li>
+        <li><a href="/forums" rel="tooltip" title="Forum de discussões"><h4>FORUM</h4></a></li>
+    </ul>
+
+</head>
+
+<body>
+<script src="js/bootstrap.js"></script>
+<script src="http://code.jquery.com/jquery.js"></script>
+
+<p class='notice'><%= notice  %></p>
+<p class='alert'><%= alert  %></p>
+
+<%= yield %>
+</body>
+</html>

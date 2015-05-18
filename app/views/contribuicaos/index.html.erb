@@ -1,0 +1,33 @@
+<h1>Contribuições</h1>
+
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Versão</th>
+      <th>Data</th>
+      <th>Arquivo</th>
+      <th>Usuário</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contribuicaos.each do |contribuicao| %>
+      <tr>
+        <td><%= contribuicao.versao %></td>
+        <td><%= contribuicao.data %></td>
+        <td><%= contribuicao.arquivo %></td>
+        <td><%= (contribuicao.user) ? contribuicao.user.nome : "null"%></td>
+        <td><%= link_to 'Editar', edit_contribuicao_path(contribuicao), class: 'btn btn-primary' %></td>
+        <td><%= link_to 'Deletar', contribuicao, method: :delete, data: { confirm: 'Tem certeza?' }, class: 'btn btn-primary' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Incluir Contribuicao', new_contribuicao_path, class: 'btn btn-primary' %>
+<%= link_to 'Voltar para Projetos', {:controller => "projetos", :method => "index"}, class: 'btn btn-primary' %>

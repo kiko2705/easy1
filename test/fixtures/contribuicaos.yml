@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  versao: MyString
+  data: 2014-12-16
+  arquivo: MyString
+  usuario_id: 
+
+two:
+  versao: MyString
+  data: 2014-12-16
+  arquivo: MyString
+  usuario_id: 

@@ -1,0 +1,42 @@
+<%= form_for(@qualificacao) do |f| %>
+  <% if @qualificacao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@qualificacao.errors.count, "erro") %> Impossível persistir dado:</h2>
+
+      <ul>
+      <% @qualificacao.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+
+  <div class="field">
+    <%= f.select :user_id, options_from_collection_for_select(User.all, "id", "username") %>
+    <%= link_to 'Add', class: 'btn btn-primary' %>
+  </div>
+  <div class="field">
+    <%= f.select :linguagem, ['Assembler', 'C', 'C++', 'C#', 'Objective C', 'Java', 'Ruby', 'Phyton', 'Perl', 'HTML', 'ASP', 'Javascript', 'Smalltalk', 'XML', 'Lua'], :include_blank => "Linguagem" %>
+    <%= link_to 'Add', class: 'btn btn-primary' %>
+  </div> 
+  <div class="field">
+    <%= f.select :os, ['Windows', 'Linux','IOS', 'Android' , 'Unix'], :include_blank => "SO" %>
+    <%= link_to 'Add', class: 'btn btn-primary' %>
+  </div>
+  <div class="field">
+    <%= f.select :repositorio, ['GitHub', 'SourceForge','GoogleCode', 'BitBucket' , 'LauncjPad' , 'CodePlex'], :include_blank => "CVS"%>
+    <%= link_to 'Add', class: 'btn btn-primary' %>
+  </div>
+  <div class="field">
+    <%= f.select :ide, ['Visual Studio', 'Eclipse','Netbeans', 'Xcode' , 'rubyMine' , 'Dev C++', 'Android Studio'], :include_blank => "Framework" %>
+    <%= link_to 'Add', class: 'btn btn-primary' %>
+  </div>
+  <div class="field">
+    <%= f.text_field :outros, :include_blank => "Outros" %>
+    <%= link_to 'Add', class: 'btn btn-primary' %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Incluir', class: 'btn btn-primary' %>
+  </div>
+<% end %>

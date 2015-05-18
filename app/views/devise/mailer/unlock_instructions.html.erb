@@ -1,0 +1,7 @@
+<p>Olá <%= @resource.email %>!</p>
+
+<p>Sua conta foi travada por excesso de tentativas inválidas.</p>
+
+<p>Vá ao link abaixo para destravá-la:</p>
+
+<p><%= link_to 'Destravar', unlock_url(@resource, unlock_token: @token), class: 'btn btn-primary' %></p>
