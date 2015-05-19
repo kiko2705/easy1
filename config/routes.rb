@@ -13,6 +13,7 @@ EasyOpenSource::Application.routes.draw do
   resources  :qualificacaos
   resources  :bugs
   resources  :box_projects
+  resources  :forem 
 
   # Usamos esta linha para redirecionar após sign_up para pagina desejada
   #devise_for :users, :controllers => { :registrations => "registrations" }
