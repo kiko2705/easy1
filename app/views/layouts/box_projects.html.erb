@@ -16,7 +16,6 @@
         <li><a href="/static_pages/home" rel="tooltip" title="Página inicial"><h4>FLOSS COACH</h4></a></li>
         <li><a href="/static_pages/home" rel="tooltip" title="Página inicial"><h4>HOME</h4></a></li>
         <li><a href="/forums" rel="tooltip" title="Forum de discussões"><h4>FORUM</h4></a></li>
-        <% if user_signed_in? %>
         <li>
           <%= form_tag("/projetos/show", method: "get") do %>
           <div class="form-group">
@@ -25,6 +24,7 @@
           </div>
           <% end %>
         </li>
+        <% if user_signed_in? %>
         <li>
         <%= link_to('LOGOUT', destroy_user_session_path, :method=>'delete') %>        
         </li>
@@ -42,6 +42,7 @@
         <li><a href="#" rel="tooltip" title="Página inicial"><h5>Setup your workspace</h5></a></li>
         <li><a href="#" rel="tooltip" title="Página inicial"><h5>Deal with the code</h5></a></li>
         <li><a href="#" rel="tooltip" title="Página inicial"><h5>Submmit your Changes</h5></a></li>
+        <li><a href="/qualificacaos/new" rel="tooltip" title="Skills"><h5>Skills</h5></a></li>
     </ul>
 
 

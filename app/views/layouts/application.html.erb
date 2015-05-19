@@ -16,7 +16,6 @@
         <li><a href="/static_pages/home" rel="tooltip" title="Página inicial"><h4>FLOSS COACH</h4></a></li>
         <li><a href="/static_pages/home" rel="tooltip" title="Página inicial"><h4>HOME</h4></a></li>
         <li><a href="/forums" rel="tooltip" title="Forum de discussões"><h4>FORUM</h4></a></li>
-        <% if user_signed_in? %>
         <li>
           <%= form_tag("/projetos/show", method: "get") do %>
           <div class="form-group">
@@ -25,6 +24,7 @@
           </div>
           <% end %>
         </li>
+        <% if user_signed_in? %>
         <li>
         <%= link_to('LOGOUT', destroy_user_session_path, :method=>'delete') %>        
         </li>
