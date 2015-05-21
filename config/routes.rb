@@ -1,9 +1,5 @@
 EasyOpenSource::Application.routes.draw do
 
-  resources :items
-
-  resources :caixas
-
   # This line mounts Forem's routes at /forums by default.
   # This means, any requests to the /forums URL of your application will go to Forem::ForumsController#index.
   # If you would like to change where this extension is mounted, simply change the :at option to something different.
@@ -13,11 +9,9 @@ EasyOpenSource::Application.routes.draw do
 
   devise_for :users
   resources  :projetos 
-  resources  :contribuicaos
+  resources  :items
+  resources  :caixas
   resources  :qualificacaos
-  resources  :bugs
-  resources  :box_projects
-  resources  :item_box_projects
   resources  :forem 
 
   # Usamos esta linha para redirecionar após sign_up para pagina desejada
@@ -29,10 +23,6 @@ EasyOpenSource::Application.routes.draw do
   # You can have the root of your site routed with "root"
   #root 'projetos#index'
 
-  get 'box_projects/js/bootstrap.js' => 'box_projects#new'
-
-  get 'box_projects/new' => 'box_projects#new'
-  
   get  'static_pages/home', as: :home
   root 'static_pages#home'
   #quando acessar,  localhost:3000/pesquisar, irá buscar o método search no controller projetos
@@ -41,12 +31,12 @@ EasyOpenSource::Application.routes.draw do
   get 'qualificacaos/technical_skills'     => 'qualificacaos#technical_skills', as: :technical_skills
   get 'qualificacaos/soft_skills'          => 'qualificacaos#soft_skills', as: :soft_skills
   get 'qualificacaos/resources_available'  => 'qualificacaos#resources_available', as: :resources_available
-  get 'search_novatos'  => 'qualificacaos#search', as: :search_novatos_qualificacaos
+  #get 'search_novatos'  => 'qualificacaos#search', as: :search_novatos_qualificacaos
 
   get 'pagina_projeto'  => 'projetos#pagina_projeto', as: :paginas_projeto
   get 'projetos/index'  => 'projetos#index', as: :projetos_path
   get 'projetos/search' => 'projetos#search', as: :projetos_search
-  get 'projetos/lista'  => 'projetos#lista_projetos', as: :projetos_lista
+  #get 'projetos/lista'  => 'projetos#lista_projetos', as: :projetos_lista
 
   # aqui irá o pesquisar avançado
   #get '/projetos/lista_projetos' => 'projetos#lista_projetos', as: :lista_projetos

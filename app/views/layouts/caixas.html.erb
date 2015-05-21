@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Floss Coach</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "forem" %>
+  <%= javascript_include_tag "forem" %>
+  <%= csrf_meta_tags %>
+
+    <ul class="nav nav-tabs">
+        <li><a href="/static_pages/home" rel="tooltip" title="Página inicial"><h4>FLOSS COACH</h4></a></li>
+        <li><a href="/forums" rel="tooltip" title="Forum de discussões"><h4>FORUM</h4></a></li>
+        <li>
+          <%= form_tag("/projetos/show", method: "get") do %>
+          <div class="form-group">
+          <%= text_field_tag :q, nil, placeholder: 'Escolha um Projeto', class: 'form-control' %>
+          <%= submit_tag "Search", class: "btn btn-default" %>
+          </div>
+          <% end %>
+        </li>
+        <% if user_signed_in? %>
+        <li>
+        <%= link_to('LOGOUT', destroy_user_session_path, :method=>'delete') %>        
+        </li>
+        <% else %>
+        <li>
+        <%= link_to('LOGIN', new_user_session_path)  %>  
+        </li>
+        <% end %>
+    </ul>
+
+
+    <ul class="nav nav-tabs">
+        <li><a href="#" rel="tooltip" title="Página inicial"><h5>How to Start</h5></a></li>
+        <li><a href="#" rel="tooltip" title="Página inicial"><h5>Talk to the Community</h5></a></li>
+        <li><a href="#" rel="tooltip" title="Página inicial"><h5>Setup your workspace</h5></a></li>
+        <li><a href="#" rel="tooltip" title="Página inicial"><h5>Deal with the code</h5></a></li>
+        <li><a href="#" rel="tooltip" title="Página inicial"><h5>Submmit your Changes</h5></a></li>
+        <% if 'se estiver em projeto/new' %>
+        <ul class="nav nav-tabs">
+        <li><a href="/qualificacaos/new" rel="tooltip" title="Skills"><h5>Skills</h5></a></li>
+        <% end %>
+    </ul>
+    </ul>
+
+
+</head>
+
+<body>
+
+<p class='notice'><%= notice  %></p>
+<p class='alert'><%= alert  %></p>
+
+<%= yield %>
+</body>
+</html>

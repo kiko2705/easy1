@@ -14,6 +14,8 @@ class CaixasController < ApplicationController
 
   def new
     @caixa = Caixa.new
+    @caixa.items.build
+    @caixa.items.new
     respond_with(@caixa)
   end
 
@@ -42,6 +44,6 @@ class CaixasController < ApplicationController
     end
 
     def caixa_params
-      params.require(:caixa).permit(:nome, :descricao)
+      params.require(:caixa).permit(:nome, :descricao, :projeto_id, items_attributes:[:tipo, :conteudo, :_destroy,:id])
     end
 end

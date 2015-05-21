@@ -6,6 +6,11 @@
     <%= f.input :descricao %>
   </div>
 
+  <h4>Items do Box</h4>
+  <% f.fields_for :items do |ff| %>
+      <%= ff.input :tipo %>
+      <%= ff.input :conteudo %>
+  <% end -%>
   <div class="form-actions">
     <%= f.button :submit %>
   </div>

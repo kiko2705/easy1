@@ -13,14 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150521055951) do
 
-  create_table "box_projects", force: true do |t|
-    t.string   "titulo"
-    t.text     "descricao"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "projeto_id"
-  end
-
   create_table "caixas", force: true do |t|
     t.string   "nome"
     t.string   "descricao"
@@ -144,15 +136,6 @@ ActiveRecord::Schema.define(version: 20150521055951) do
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "item_box_projects", force: true do |t|
-    t.string   "nome"
-    t.string   "conteudo"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "box_project_id"
-    t.integer  "box_id"
   end
 
   create_table "items", force: true do |t|

@@ -10,7 +10,7 @@
     <% if not @projetos.empty? %>
     <% @projetos.each do |projeto| %>
       <tr>
-        <td><%= link_to projeto.nome, box_projects_path %></td>
+        <td><%= link_to projeto.nome, caixas_path %></td>
       </tr>
     <% end %>
     <% end %>

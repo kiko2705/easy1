@@ -267,10 +267,16 @@ Form original da view box_project
 ---------------------------------------------------------------------------------------------------
 incluir no for_for do box_project no final
 
-<h3>Items do Box</h3>
-  <% f.fields_for :item_box_projects do |ff| %>
+  <h3>Items do Box</h3>
+  <% f.fields_for :items do |ff| %>
     <p>
-      <%= ff.label :nome %>
-      <%= ff.text_field :nome, :size => 50 %>
+      <%= ff.label :tipo %>
+      <%= ff.text_field :tipo, :size => 50 %>
+    </p>
+    <p>
+      <%= ff.label :conteudo %>
+      <%= ff.text_field :conteudo, :size => 50 %>
     </p>
   <% end -%>
+
+  --------------------------------------------------------------------------------
