@@ -189,3 +189,88 @@ colocar no projeto quando for fazer filtro específico
   <div class="field">
     <%= f.select :status, ['Ativo', 'Aprovação', 'Inativo'], :include_blank => "Status" %>
   </div>
+-------------------------------------------------------------------------------------------
+search no cabeçalho
+
+<%= text_field_tag :q, nil, placeholder: '"add" Para Incluir Projeto', class: 'form-control' %>
+
+--------------------------------------------------------------------------------------------
+Create original do box_project_controller
+
+@box_project = BoxProject.create(boxProject_params)  
+
+    respond_to do |format|
+      if @box_project.save
+        format.html { redirect_to @box_project, notice: 'Box criado com sucesso.' }
+        format.json { render action: 'show', status: :created, location: @box_project }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @box_project.errors, status: :unprocessable_entity }
+      end
+    end
+
+-------------------------------------------------------------------------------------------
+
+Update original do box_project_controller
+
+  respond_to do |format|
+      if @box_project.update(boxProject_params)
+        format.html { redirect_to @box_project, notice: 'Box alterado com sucesso.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @box_project.errors, status: :unprocessable_entity }
+      end
+    end
+
+  -----------------------------------------------------------------------------------
+  Delete original do box_project_controller
+
+  @box_project.destroy
+    respond_to do |format|
+      format.html { redirect_to boxProjects_url }
+      format.json { head :no_content }
+    end
+
+  ------------------------------------------------------------------------------------
+Form original da view box_project
+
+
+  <%= form_for(@box_project) do |f| %>
+  <% if @box_project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@box_project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @box_project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-inputs">
+    <%= f.label  :projeto_id %>
+    <%= f.select :projeto_id, options_from_collection_for_select(Projeto.all, "id", "nome") %>
+    <%= f.label  :titulo %>
+    <%= f.text_field  :titulo %>
+    <%= f.label  :descricao %>
+    <%= f.text_field  :descricao %>
+    <%= f.label  :topico %>
+    <%= f.text_field  :topico %>
+    <%= f.label  :link %>
+    <%= f.text_field  :link %>
+  </div>
+    <%= f.submit 'Salvar', class: 'btn btn-primary' %>
+<% end %>
+
+---------------------------------------------------------------------------------------------------
+incluir no for_for do box_project no final
+
+<h3>Items do Box</h3>
+  <% f.fields_for :item_box_projects do |ff| %>
+    <p>
+      <%= ff.label :nome %>
+      <%= ff.text_field :nome, :size => 50 %>
+    </p>
+  <% end -%>

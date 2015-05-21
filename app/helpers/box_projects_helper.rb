@@ -1,2 +1,2 @@
-module BoxProjectsHelper
+module BoxProjectsHelper	
 end

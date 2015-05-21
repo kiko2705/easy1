@@ -1,8 +1,6 @@
 class BoxProjectsController < ApplicationController
   before_action :set_box_project, only: [:show, :edit, :update, :destroy]
 
-  respond_to :html
-
   def index
     @box_projects = BoxProject.all
   end
@@ -12,13 +10,11 @@ class BoxProjectsController < ApplicationController
 
   def new
     @box_project = BoxProject.new
-  end
-
-  def edit
+    @box_project.item_box_projects.build
   end
 
   def create
-    @box_project = BoxProject.create(boxProject_params)  
+    @box_project = BoxProject.create(box_project_params)  
 
     respond_to do |format|
       if @box_project.save
@@ -31,9 +27,13 @@ class BoxProjectsController < ApplicationController
     end
   end
 
-  def update
-    respond_to do |format|
-      if @box_project.update(boxProject_params)
+  def edit
+    @box_project = BoxProject.find(params[:id])
+  end
+
+  def update 
+     respond_to do |format|
+      if @box_project.update(box_project_params)
         format.html { redirect_to @box_project, notice: 'Box alterado com sucesso.' }
         format.json { head :no_content }
       else
@@ -46,7 +46,7 @@ class BoxProjectsController < ApplicationController
   def destroy
     @box_project.destroy
     respond_to do |format|
-      format.html { redirect_to boxProjects_url }
+      format.html { redirect_to box_projects_url }
       format.json { head :no_content }
     end
   end
@@ -59,6 +59,6 @@ class BoxProjectsController < ApplicationController
     end
 
     def box_project_params
-      params.require(:box_project).permit(:titulo, :descricao, :topico, :link, :projeto_id)
+      params.require(:box_project).permit(:titulo, :descricao, :topico, :link, :projeto_id, item_box_projects_attributes:[:nome, :conteudo, :_destroy,:id])
     end
 end

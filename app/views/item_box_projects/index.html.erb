@@ -1,0 +1,29 @@
+<h1>Listing item_box_projects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Conteudo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @item_box_projects.each do |item_box_project| %>
+      <tr>
+        <td><%= item_box_project.nome %></td>
+        <td><%= item_box_project.conteudo %></td>
+        <td><%= link_to 'Show', item_box_project %></td>
+        <td><%= link_to 'Edit', edit_item_box_project_path(item_box_project) %></td>
+        <td><%= link_to 'Destroy', item_box_project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Item box project', new_item_box_project_path %>

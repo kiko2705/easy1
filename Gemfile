@@ -9,6 +9,12 @@ gem 'forem-bootstrap', :github => "radar/forem-bootstrap"
 
 gem 'searchkick'
 
+gem 'awesome_nested_fields'
+
+gem 'nested_form_fields'
+
+gem 'rails4-autocomplete', '~> 1.1.1'
+
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @item_box_project.nome %>
+</p>
+
+<p>
+  <strong>Conteudo:</strong>
+  <%= @item_box_project.conteudo %>
+</p>
+
+<%= link_to 'Edit', edit_item_box_project_path(@item_box_project) %> |
+<%= link_to 'Back', item_box_projects_path %>

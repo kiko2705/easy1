@@ -1,5 +1,9 @@
 EasyOpenSource::Application.routes.draw do
 
+  resources :items
+
+  resources :caixas
+
   # This line mounts Forem's routes at /forums by default.
   # This means, any requests to the /forums URL of your application will go to Forem::ForumsController#index.
   # If you would like to change where this extension is mounted, simply change the :at option to something different.
@@ -13,6 +17,7 @@ EasyOpenSource::Application.routes.draw do
   resources  :qualificacaos
   resources  :bugs
   resources  :box_projects
+  resources  :item_box_projects
   resources  :forem 
 
   # Usamos esta linha para redirecionar após sign_up para pagina desejada
@@ -24,6 +29,10 @@ EasyOpenSource::Application.routes.draw do
   # You can have the root of your site routed with "root"
   #root 'projetos#index'
 
+  get 'box_projects/js/bootstrap.js' => 'box_projects#new'
+
+  get 'box_projects/new' => 'box_projects#new'
+  
   get  'static_pages/home', as: :home
   root 'static_pages#home'
   #quando acessar,  localhost:3000/pesquisar, irá buscar o método search no controller projetos

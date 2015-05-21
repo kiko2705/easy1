@@ -9,7 +9,6 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= stylesheet_link_tag "forem" %>
   <%= javascript_include_tag "forem" %>
-
   <%= csrf_meta_tags %>
 
     <ul class="nav nav-tabs">
@@ -18,7 +17,7 @@
         <li>
           <%= form_tag("/projetos/show", method: "get") do %>
           <div class="form-group">
-          <%= text_field_tag :q, nil, placeholder: '"add" Para Incluir Projeto', class: 'form-control' %>
+          <%= text_field_tag :q, nil, placeholder: 'Escolha um Projeto', class: 'form-control' %>
           <%= submit_tag "Search", class: "btn btn-default" %>
           </div>
           <% end %>

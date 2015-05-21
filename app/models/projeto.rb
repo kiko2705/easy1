@@ -1,6 +1,5 @@
 class Projeto < ActiveRecord::Base
 	has_many  :users
-	has_many  :bugs
   has_many  :box_projects
   validates :nome, presence: true
 
