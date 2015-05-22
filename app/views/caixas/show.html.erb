@@ -10,5 +10,20 @@
   <%= @caixa.descricao %>
 </p>
 
+<h4>Item</h4>
+<p>
+  <div class="pai">
+       <div class="filho">
+            <strong>Tipo:</strong>
+            <%= @caixa.item.tipo %>
+       </div>
+       <div class="filho">
+            <strong>Conteudo:</strong>
+            <%= @caixa.item.conteudo %>
+       </div>
+  </div>
+</p>
+
 <%= link_to 'Edit', edit_caixa_path(@caixa) %> |
 <%= link_to 'Back', caixas_path %>
+

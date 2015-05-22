@@ -4,11 +4,11 @@
     <%= f.input :descricao %>
 
         <h4>Item</h4>
-        <%= f.simple_fields_for :items, @caixa.items.build do |item| %>
-        <%= item.input :tipo,     label: "Tipo: " %>
-        <%= item.input :conteudo, label: "Conteudo: " %>   
+        <%= f.nested_fields_for :items, @caixa.items.build do |item| %>
+            <%= item.remove_nested_fields_link %>
+            <%= item.text_field :tipo %>
+            <%= item.text_field :conteudo %>   
         <% end %>
+        <%= f.add_nested_fields_link :items %>
 <%= f.button :submit %>
 <% end %>
-
-
