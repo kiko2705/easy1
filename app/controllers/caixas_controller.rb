@@ -14,8 +14,6 @@ class CaixasController < ApplicationController
 
   def new
     @caixa = Caixa.new
-    @caixa.items.build
-    @caixa.items.new
     respond_with(@caixa)
   end
 

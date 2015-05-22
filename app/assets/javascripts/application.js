@@ -18,6 +18,7 @@
 //= require forem
 //= require jquery-ui
 //= require jquery.nested-fields
+//= require cocoon
 
 $(document).ready(function(e) {
   $('FORM').nestedFields();
